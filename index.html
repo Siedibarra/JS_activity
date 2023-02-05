@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><h1>Its all Javascript in here!</h1></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </nav>
+
+    <main>
+        <div class="container-fluid">
+                <div class="row">
+                    
+                  <div class="col-12 col-md-3">
+                    <details>
+                      <summary><h4>Check time here</h4></summary>
+                        <div class="clock">
+                          <span class="fw-bold fs-2" id="hours"></span>
+                          <span class="fw-bold fs-2">:</span>
+                          <span class="fw-bold fs-2" id="minutes">00</span>
+                          <span class="fw-bold fs-2">:</span>
+                          <span class="fw-bold fs-2" id="seconds">00</span>
+                          <span class="fw-bold fs-2">:</span>
+                          <span class="fw-bold fs-2" id="setting">AM</span>
+                          <br>
+                          <span id="date"></span>
+                        </div>
+                    </details>
+                  
+                    <details>
+                      <summary><h4>Need a Calculator?</h4></summary>
+                      
+                      <div class="calculator-container">
+                        <div class="calculator">
+                            <div class="theme-toggler active">
+                                <i class="toggler-icon"></i>
+                            </div>
+                
+                            <div class="display-screen">
+                                <div id="display"></div>
+                            </div>
+                
+                            <div class="buttons">
+                                <table>
+                                    <tr>
+                                        <td><button class="btn-operator" id="clear">C</button></td>
+                                        <td><button class="btn-operator" id="/">&divide</button></td>
+                                        <td><button class="btn-operator" id="*">&times</button></td>
+                                        <td><button class="btn-operator" id="backspace"><</button></td>
+                                    </tr>
+                
+                                    <tr>
+                                        <td><button class="btn-number" id="7">7</button></td>
+                                        <td><button class="btn-number" id="8">8</button></td>
+                                        <td><button class="btn-number" id="9">9</button></td>
+                                        <td><button class="btn-operator" id="-">-</button></td>
+                                    </tr>
+                
+                                    <tr>
+                                        <td><button class="btn-number" id="4">4</button></td>
+                                        <td><button class="btn-number" id="5">5</button></td>
+                                        <td><button class="btn-number" id="6">6</button></td>
+                                        <td><button class="btn-operator" id="+">+</button></td>
+                                    </tr>
+                
+                                    <tr>
+                                        <td><button class="btn-number" id="1">1</button></td>
+                                        <td><button class="btn-number" id="2">2</button></td>
+                                        <td><button class="btn-number" id="3">3</button></td>
+                                        <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+                                    </tr>
+                
+                                    <tr>
+                                        <td><button class="btn-operator" id="(">(</button></td>
+                                        <td><button class="btn-operator" id="0">0</button></td>
+                                        <td><button class="btn-operator" id=")">)</button></td>
+                                    </tr>
+                
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    </details>
+
+                    <details>
+                      <summary><h4>Are you overweight?</h4></summary>
+                      
+                        <div class="container-fluid">
+                          
+                          <div class="bmi-container">
+                            <br>
+                            <h6>Please enter height (cm) and weight (kg)</h6>
+
+                            <br>
+                            
+                            <p>Height: </p>
+                            <input class="form-control" type="text" id="height">
+                            <br>
+                            <p>Weight: </p>
+                            <input class="form-control" type="text" id="weight">
+                            <hr>
+                            <h5 id="result">00</h5>
+
+                            <p>Less than 18.5 BMI = Isang Ubo ka nalang</p>
+                            <p> 18.5 to 24.9 BMI = Normal</p>
+                            <p>25.0 to 29.9 BMI = Overweight ka na</p>
+                            <p>30 and Up BMI = Mag Diet ka na</p>
+                            <br>
+                            <button class="btn btn-outline-primary" id="btn" onClick="bmi()">Calculate BMI</button>
+
+
+                          </div>
+
+                        </div>
+                    </details>
+
+                    <details>
+                      <summary><h4 id="heading1">Are you hungry??</h4></summary>
+                      <a class="btn btn-outline-primary" id="testing" onclick="testingBtn()"> Get food here </a>
+  
+                    </details>
+                  </div>
+
+                  
+                  
+                  
+                  <div class="col-12 col-md-6">
+
+                      
+                    <div class="container-fluid">
+                      <div class="container">
+
+                        
+                        <div class="toolbar">
+                          <details>
+                          <summary class="brand">Shop</summary>
+                          <p>
+                              <a href="cart.html">
+                                  Cart items:
+                                  <span id="count">0</span>, Price:
+                                  <span id="sum">0</span>
+                              </a>
+                          </p>
+                      </div>
+
+                    </details>
+              
+                      <div class="products">
+                          <div class="product">
+                              <img src ="mtapo1.jpg" alt="cat1" height="150" width="140">
+                              <h3>Product one</h3>
+                              <p>Price: 2000</p>
+                              <button class="btn btn-outline-primary" data-id="1" data-price="2000" data-title="Product one" data-image="mtapo1.jpg">Add to cart</button>
+                          </div>
+              
+                          <div class="product">
+                              <img src ="mtapo1.jpg" alt="cat1" height="150" width="140">
+                              <h3>Product two</h3>
+                              <p>Price: 3000</p>
+                              <button class="btn btn-outline-primary" data-id="2" data-price="3000" data-title="Product two" data-image="mtapo1">Add to cart</button>
+                          </div>
+              
+                          <div class="product">
+                              <img src ="mtapo1.jpg" alt="cat1" height="150" width="140">
+                              <h3>Product three</h3>
+                              <p>Price: 6000</p>
+                              <button class="btn btn-outline-primary" data-id="3" data-price="6000" data-title="Product three" data-image="mtapo1.jpg">Add to cart</button>
+                          </div>
+              
+                          <div class="product">
+                              <img src ="mtapo1.jpg" alt="cat1" height="150" width="140">
+                              <h3>Product four</h3>
+                              <p>Price: 1000</p>
+                              <button class="btn btn-outline-primary" data-id="4" data-price="1000" data-title="Product four" data-image="mtapo1.jpg">Add to cart</button>
+                          </div>
+                      </div>
+
+                      </div>
+
+                    
+                    </div>
+
+                  </div>
+
+                  <div class="col-12 col-md-3">
+
+                    <details>
+                      <summary><span class="fs-4">UPPERCASE</span> and <span class="fs-5">lowercase</span></summary>
+                      <div class="text-container mt-5">
+                        <div class="container">
+                          <textarea class="form-control" name="text" id="textarea" cols="30" rows="5"></textarea>
+                        </div>
+  
+                        <div class="display">
+                          <p class="lead fw-bold mt-5" id="textresult">Result here</p>
+                        </div>
+  
+                        <div class="container-btn">
+                          <button id="uppercase" class="btn btn-outline-primary" onclick="upperC()">UPPERCASE</button>
+                          <button id="lowercase" class="btn btn-outline-success" onclick="lowerC()">lowercase</button>
+                        </div>
+                      </div>
+                    </details>
+
+                    <details>
+                      <summary><h5>Change the background color here</h5></summary>
+                      <div class="color-container">
+                        <div class="container">
+                          <span id="1" onclick="color(this)" class="color clr1"></span>
+                          <span id="2" onclick="color(this)" class="color clr2"></span>
+                          <span onclick="color(this)" class="color clr3"></span>
+                          <span onclick="color(this)" class="color clr4"></span>
+                        </div>
+                      </div>
+                    </details>
+
+                  </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
